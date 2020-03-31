@@ -1,0 +1,46 @@
+.dialkeypad {
+    position: relative;
+    width: 472px; height: 206px;
+    background-image: url('../../assets/img/DialKeyPad.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.dialkeypad-dialwrap {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+}
+.dialkeypad-buttonwrap {
+    position: absolute;
+    width: 100%;
+    top: 134px;
+}
+.dialkeypad-dialgroup {
+    width: 373px;
+    margin: auto;
+    white-space: nowrap;
+}
+.dialkeypad-buttongroup {
+    width: 384px;
+    margin: auto;
+    white-space: nowrap;
+}
+.dialkeypad button {
+    background-color: transparent;
+    border: none; outline: none;
+}
+.dialkeypad button:hover { 
+    background-color: rgba(86, 131, 200, 0.7);
+    cursor: pointer;
+}
+.dialkeypad-dialgroup-element {
+    width: 36px; height: 36px;
+    margin-right: 71px;
+    border-radius: 50%;
+}
+.dialkeypad-buttongroup-element {
+    width: 67px; height: 33px;
+    margin-right: 6.5px;
+    border-radius: 5px;  
+}

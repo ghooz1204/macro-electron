@@ -1,0 +1,16 @@
+.view-function-title {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.view-function-group-table {
+    width: 100%;
+    text-align: center;
+}
+
+.view-function-element {
+    border: solid 1px #000;
+}
+.view-function-element:hover {
+    background-color: #666;
+}

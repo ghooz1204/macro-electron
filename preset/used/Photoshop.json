@@ -1,0 +1,65 @@
+{
+    "Program": "Photoshop",
+    "Preset": [
+        {
+            "_comment" : "group1",
+            "drotate" : [
+                {"fname": "Mouse Scroll", "fc": "forceMouse.scrollY(v)"},
+                {"fname": "Ctrl + Mouse Scroll", "fc": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"},
+                {"fname": "Keyboard Arrow X", "fc": "forceKeyboard.arrowX(v)"},
+                {"fname": "Keyboard Arrow Y", "fc": "forceKeyboard.arrowY(v)"}
+            ],
+            "bpush": [
+                {"fname": "Mouse Left Double Click", "fc": "forceMouse.doubleLeftClick()"},
+                {"fname": "저장", "fc": "forceKeyboard.combineKey('s', 'control')"},
+                {"fname": "전체 선택 주석", "fc": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"},
+                {"fname": "Mouse Right One Click", "fc": "forceMouse.oneRightClick()"}
+            ]
+        },
+        {
+            "_comment" : "group2",
+            "drotate" : [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ],
+            "bpush": [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ]
+        },
+        {
+            "_comment" : "group3",
+            "drotate" : [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ],
+            "bpush": [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ]
+        },
+        {
+            "_comment" : "group4",
+            "drotate" : [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ],
+            "bpush": [
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""},
+                {"fname": "", "fc": ""}
+            ]
+        }
+    ]
+}

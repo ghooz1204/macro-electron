@@ -1,0 +1,21 @@
+{
+  "name": "macro-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "npm rebuild --runtime=electron --target=8.1.1 --disturl=https://atom.io/download/atom-shell --abi=72"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.1.1",
+    "electron-rebuild": "^1.10.1"
+  },
+  "dependencies": {
+    "robotjs": "^0.6.0",
+    "serialport": "^8.0.7",
+    "usb-detection": "^4.7.0"
+  }
+}
