@@ -2,63 +2,211 @@
     "Program": "Photoshop",
     "Preset": [
         {
+            "_number": 1,
             "_comment" : "키보드와 마우스 테스트",
             "drotate" : [
-                {"fname": "Mouse Scroll", "fc": "forceMouse.scrollY(v)"},
-                {"fname": "Ctrl + Mouse Scroll", "fc": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"},
-                {"fname": "Keyboard Arrow X", "fc": "forceKeyboard.arrowX(v)"},
-                {"fname": "Keyboard Arrow Y", "fc": "forceKeyboard.arrowY(v)"}
+                {
+                    "fname": "Mouse Scroll",
+                    "fcodeL": "mousewheel",
+                    "fcodeR": "mousewheel",
+                    "execute": "forceMouse.scrollY(v)"
+                },
+                {
+                    "fname": "Ctrl + Mouse Scroll",
+                    "fcodeL": "Control + mousewheeldown",
+                    "fcodeR": "Control + mousewheelup",
+                    "execute": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"
+                },
+                {
+                    "fname": "Keyboard Arrow X",
+                    "fcodeL": "ArrowLeft",
+                    "fcodeR": "ArrowRight",
+                    "execute": "forceKeyboard.arrowX(v)"
+                },
+                {
+                    "fname": "Keyboard Arrow Y",
+                    "fcodeL": "ArrowDown",
+                    "fcodeR": "ArrowUp",
+                    "execute": "forceKeyboard.arrowY(v)"
+                }
             ],
             "bpush": [
-                {"fname": "Mouse Left Double Click", "fc": "forceMouse.doubleLeftClick()"},
-                {"fname": "저장", "fc": "forceKeyboard.combineKey('s', 'control')"},
-                {"fname": "전체 선택 주석", "fc": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"},
-                {"fname": "Mouse Right One Click", "fc": "forceMouse.oneRightClick()"}
+                {
+                    "fname": "Mouse Left Double Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.doubleLeftClick()"
+                },
+                {
+                    "fname": "저장",
+                    "fcode": "Control + s",
+                    "execute": "forceKeyboard.combineKey('s', 'control')"
+                },
+                {
+                    "fname": "전체 선택 주석",
+                    "fcode": "Control + a + k + c",
+                    "execute": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"
+                },
+                {
+                    "fname": "Mouse Right One Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.oneRightClick()"
+                }
             ]
         },
         {
-            "_comment" : "group2",
+            "_number": 2,
+            "_comment" : "키보드와 마우스 테스트",
             "drotate" : [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Scroll",
+                    "fcodeL": "mousewheel",
+                    "fcodeR": "mousewheel",
+                    "execute": "forceMouse.scrollY(v)"
+                },
+                {
+                    "fname": "Ctrl + Mouse Scroll",
+                    "fcodeL": "Control + mousewheel",
+                    "fcodeR": "Control + mousewheel",
+                    "execute": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"
+                },
+                {
+                    "fname": "Keyboard Arrow X",
+                    "fcodeL": "ArrowLeft",
+                    "fcodeR": "ArrowRight",
+                    "execute": "forceKeyboard.arrowX(v)"
+                },
+                {
+                    "fname": "Keyboard Arrow Y",
+                    "fcodeL": "ArrowDown",
+                    "fcodeR": "ArrowUp",
+                    "execute": "forceKeyboard.arrowY(v)"
+                }
             ],
             "bpush": [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Left Double Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.doubleLeftClick()"
+                },
+                {
+                    "fname": "저장",
+                    "fcode": "Control + s",
+                    "execute": "forceKeyboard.combineKey('s', 'control')"
+                },
+                {
+                    "fname": "전체 선택 주석",
+                    "fcode": "Control + a + k + c",
+                    "execute": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"
+                },
+                {
+                    "fname": "Mouse Right One Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.oneRightClick()"
+                }
             ]
         },
         {
-            "_comment" : "group3",
+            "_number": 3,
+            "_comment" : "키보드와 마우스 테스트",
             "drotate" : [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Scroll",
+                    "fcodeL": "mousewheel",
+                    "fcodeR": "mousewheel",
+                    "execute": "forceMouse.scrollY(v)"
+                },
+                {
+                    "fname": "Ctrl + Mouse Scroll",
+                    "fcodeL": "Control + mousewheel",
+                    "fcodeR": "Control + mousewheel",
+                    "execute": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"
+                },
+                {
+                    "fname": "Keyboard Arrow X",
+                    "fcodeL": "ArrowLeft",
+                    "fcodeR": "ArrowRight",
+                    "execute": "forceKeyboard.arrowX(v)"
+                },
+                {
+                    "fname": "Keyboard Arrow Y",
+                    "fcodeL": "ArrowDown",
+                    "fcodeR": "ArrowUp",
+                    "execute": "forceKeyboard.arrowY(v)"
+                }
             ],
             "bpush": [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Left Double Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.doubleLeftClick()"
+                },
+                {
+                    "fname": "저장",
+                    "fcode": "Control + s",
+                    "execute": "forceKeyboard.combineKey('s', 'control')"
+                },
+                {
+                    "fname": "전체 선택 주석",
+                    "fcode": "Control + a + k + c",
+                    "execute": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"
+                },
+                {
+                    "fname": "Mouse Right One Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.oneRightClick()"
+                }
             ]
         },
         {
-            "_comment" : "group4",
+            "_number": 4,
+            "_comment" : "키보드와 마우스 테스트",
             "drotate" : [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Scroll",
+                    "fcodeL": "mousewheel",
+                    "fcodeR": "mousewheel",
+                    "execute": "forceMouse.scrollY(v)"
+                },
+                {
+                    "fname": "Ctrl + Mouse Scroll",
+                    "fcodeL": "Control + mousewheel",
+                    "fcodeR": "Control + mousewheel",
+                    "execute": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"
+                },
+                {
+                    "fname": "Keyboard Arrow X",
+                    "fcodeL": "ArrowLeft",
+                    "fcodeR": "ArrowRight",
+                    "execute": "forceKeyboard.arrowX(v)"
+                },
+                {
+                    "fname": "Keyboard Arrow Y",
+                    "fcodeL": "ArrowDown",
+                    "fcodeR": "ArrowUp",
+                    "execute": "forceKeyboard.arrowY(v)"
+                }
             ],
             "bpush": [
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""},
-                {"fname": "", "fc": ""}
+                {
+                    "fname": "Mouse Left Double Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.doubleLeftClick()"
+                },
+                {
+                    "fname": "저장",
+                    "fcode": "Control + s",
+                    "execute": "forceKeyboard.combineKey('s', 'control')"
+                },
+                {
+                    "fname": "전체 선택 주석",
+                    "fcode": "Control + a + k + c",
+                    "execute": "forceKeyboard.combineKeys(['a', 'k', 'c'], 'control')"
+                },
+                {
+                    "fname": "Mouse Right One Click",
+                    "fcode": "mouseclick",
+                    "execute": "forceMouse.oneRightClick()"
+                }
             ]
         }
     ]

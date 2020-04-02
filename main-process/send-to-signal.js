@@ -14,9 +14,9 @@ function sendCurrentFuntion(type, index, v = 0) {
     let f = parseFunction[global.currentProgram][global.currentGroup];
     if(f) {
         if (type == "Dial") { // 다이얼 실행
-            eval(f.drotate[index].fc)
+            eval(f.drotate[index].execute)
         } else { // 버튼 입력 실행
-            eval(f.bpush[index].fc)
+            eval(f.bpush[index].execute)
         }
     }
 }

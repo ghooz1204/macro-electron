@@ -1,7 +1,7 @@
 const fs = require('fs')
 const glob = require('glob')
 const path = require('path')
-const { webContents } = require('electron')
+const { webContents, ipcMain } = require('electron')
 const EventEmitter = require('events')
 
 const __DIR_PRESETS = glob.sync(path.join(__dirname, '../preset/**/*.json'))
@@ -36,21 +36,41 @@ PresetManager.prototype.changePresets = function (newPresets)
     // 모든 프리셋을 한 번에 바꿔줌
     this.presets = newPresets
     webContents.getAllWebContents().forEach((webContent) => {
-        webContent.send('preset-change', JSON.stringify(this.presets))
+        webContent.send('presets-change', JSON.stringify(this.presets))
+    })
+    this.emit('change')
+}
+PresetManager.prototype.changePresets = function (newPresets)
+{
+    // 프리셋 중 하나만 바꿔줌
+    this.presets[pname] = newPreset
+    fs.writeFileSync(pname + '.js', JSON.stringify(newPreset))
+    webContents.getAllWebContents().forEach((webContent) => {
+        webContent.send('preset-change', JSON.stringify(newPreset))
     })
     this.emit('change')
 }
 
-PresetManager.prototype.changePreset = function (pname, newPreset)
+PresetManager.prototype.changePresetFunction = function (pname, newPreset)
 {
-    // 프리셋 중 하나만 바꿔줌
-    this.presets[pname] = newPreset
+    // 프리셋 하나 중 특정 기능만 바꿔줌
+
     webContents.getAllWebContents().forEach((webContent) => {
-        webContent.send('preset-change', JSON.stringify(this.presets))
+        webContent.send('preset-function-change', JSON.stringify(newPreset))
     })
-    this.emit('change')
 }
 
 global.PM = new PresetManager() // 프리셋 관리자 전역으로 생성
 global.currentGroup = 0 // 현재 그룹 번호
 global.currentProgram = "Background" // 현재 인식된 프로그램
+
+ipcMain.on('preset-function-change', function (event, args) {
+    let newPreset = global.PM.getPresets()[args.program]
+    newPreset[args.group][args.type][args.index] = {
+        fname: args.fname,
+        fcode: args.fcode,
+        execute: args.fcode
+    }
+    // global.PM.changePresetFunction(args.program, newPreset)
+    console.log(newPreset)
+})
