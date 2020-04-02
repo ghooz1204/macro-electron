@@ -2,7 +2,7 @@
     "Program": "Photoshop",
     "Preset": [
         {
-            "_comment" : "group1",
+            "_comment" : "키보드와 마우스 테스트",
             "drotate" : [
                 {"fname": "Mouse Scroll", "fc": "forceMouse.scrollY(v)"},
                 {"fname": "Ctrl + Mouse Scroll", "fc": "forceMouse.combineMouse(v, forceMouse.scrollY, 'control', ['control'])"},

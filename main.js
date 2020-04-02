@@ -68,7 +68,6 @@ app.on('activate', () => {
 
 app.on('browser-window-focus', (event, window) => {
   // console.log(window)
-  console.log(BrowserWindow.getAllWindows())
 })
 
 function loadDemos () {
