@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'KoPub World Dotum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('KoPub World Dotum'), local('KoPubWorldDotum'), url(fonts/KoPubWorld\ Dotum\ Medium.ttf) format('truetype');
+}
+html, body {
+    background: transparent;
+    font-family: 'KoPub World Dotum';
+    color: #fff;
+    opacity: 0.9;
+}
+
+.overlay-wrap {
+    width: 534px; height: 172px;
+    padding: 18px 0;
+    margin: auto;
+    background-color: rgba(54, 63, 77, 0.76);
+    border: solid 1px #707070;
+    border-radius: 50px;
+}
+
+.overlay-dial-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 492px; height: 98px;
+    margin: auto;
+}
+.overlay-dial-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94px; height: 94px;
+    border: solid 2px #fff;
+    border-radius: 50%;
+}
+.overlay-dial-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 78px; height: 78px;
+    border: solid 1px #AFB2B8;
+    border-radius: 50%;
+}
+.overlay-dial-fname {
+    line-height: 110%;
+    word-break: keep-all;
+}
+
+.overlay-bottom { margin-top: 11px; }
+.overlay-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 477px; height: 64px;
+    border-radius: 15px;
+    border: solid 1px #AFB2B8;
+    margin: auto;
+}
+
+.overlay-button-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 456px; height: 41px;
+    margin: auto;
+}
+
+.overlay-button-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px; height: 41px;
+    border: solid 2px #fff;
+    border-radius: 10px;
+}
+.group-change.overlay-button-element { color: #9FA6AF;}
+.overlay-button-fname {
+    line-height: 110%;
+    word-break: keep-all;
+}

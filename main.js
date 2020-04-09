@@ -1,22 +1,44 @@
-const { app, BrowserWindow } = require('electron')
-
 const glob = require('glob')
 const path = require('path')
+// Node.js module
 
-// Speed up the mouse.
+const {
+  app,
+  BrowserWindow,
+  BrowserView,
+  screen
+} = require('electron')
+// Electron Main-process module
 
 function createOverlay() {
   // Create the overlay window.
-  const overlay = new BrowserWindow({
-    width: 300, height: 300,
+  let timer
+  const modalPath = path.join('file://', __dirname, '/sections/windows/overlay.html')
+  const oWidth = 600, oHeight = 250
+  const oX = (screen.getPrimaryDisplay().workArea.width - oWidth) / 2
+  const oY = screen.getPrimaryDisplay().workArea.height - oHeight;
+  global.overlay = new BrowserWindow({
+    width: oWidth, height: oHeight,
+    x: oX, y: oY,
     alwaysOnTop: true,
-    frame: false,
+    frame: false, transparent: true,
     title: "Invaiz Overlay",
+    focusable: false, fullscreenable: false,
+    skipTaskbar: true,
+    show: false,
     webPreferences: {
       nodeIntegration: true
     }
   })
-  overlay.loadURL('overlay.html')
+  // global.overlay.webContents.openDevTools()
+  global.overlay.loadURL(modalPath)
+  global.overlay.setIgnoreMouseEvents(true)
+  global.overlay.on('show', () => {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      global.overlay.hide()
+    }, 3000)
+  })
 }
 
 function createWindow () {
@@ -33,7 +55,7 @@ function createWindow () {
   // and load the index.html of the app.
   win.loadFile('index.html')
   // Open the DevTools.
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
   win.once('ready-to-show', () => {
     win.show() // BrowserWindow가 보여줄 상태가 됐을 때 창을 보여줌
   })
@@ -45,7 +67,7 @@ function createWindow () {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.whenReady().then(createWindow) // .then(createOverlay)
+app.whenReady().then(createOverlay).then(createWindow)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {

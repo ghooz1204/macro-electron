@@ -1,10 +1,13 @@
 const SerialPort = require("serialport")
 const Readline = require('@serialport/parser-readline')
 const usbDetect = require('usb-detection')
-const STSObject = require('./send-to-signal')
+// Node.js module
 
+const STSObject = require('./send-to-signal.jsx')
 const port = new SerialPort('COM4', { baudRate: 256000 })
 const parser = new Readline()
+// 상수 정의
+
 port.pipe(parser)
 
 function getRotateVectorFromBuffer(r, v) { return v ? r : -r; } // 방향을 지정하기 위해 음수 혹은 양수로 변환.

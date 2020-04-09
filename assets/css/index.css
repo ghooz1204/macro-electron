@@ -8,3 +8,14 @@
 .on.shade {
     visibility: visible;
 } */
+
+@font-face {
+    font-family: 'KoPub World Dotum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('KoPub World Dotum'), local('KoPubWorldDotum'), url(fonts/KoPubWorld\ Dotum\ Bold.ttf) format('truetype');
+}
+
+html, body {
+    font-family: 'KoPub World Dotum';
+}

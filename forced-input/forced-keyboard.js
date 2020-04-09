@@ -21,8 +21,8 @@ module.exports = {
     {
         /* Button */
         // 일반 키 조합 연속 입력
-        console.log(`keyboard combine ${modifier} + ${keys[0]}`);
         if (keys.length > 0) {
+            console.log(keys[0]);
             robotjs.keyToggle(keys[0], 'down', modifier);
             this.combineKeys(keys.slice(1, keys.length), modifier);
             robotjs.keyToggle(keys[0], 'up', modifier);

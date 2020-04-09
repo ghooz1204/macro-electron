@@ -1,0 +1,51 @@
+.view-function-title {
+    font-weight: bold;
+    padding: 10px 0;
+}
+.view-function-group-table {
+    width: 100%;
+    text-align: center;
+}
+.view-function-element {
+    border: solid 1px #000;
+}
+.view-function-element:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+.set-function {
+    position: fixed;
+    width: 100%; height: 100%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+}
+.on.set-function { visibility: visible;}
+.set-function-area {
+    position: absolute;
+    width: 100%; height: 500px;
+    top: 0; bottom: 0;
+    margin: auto;
+}
+.set-function-content {
+    width: 500px; height: 100%;
+    background-color: #fff;
+    text-align: center;
+    left: 0; right: 0;
+    margin: auto; padding: 30px;
+}
+.set-function-title {
+    text-align: left;
+}
+.set-function-input {
+    display: block;
+    width: 400px;
+    margin: auto; padding: 10px;
+    margin-bottom: 20px;
+}
+.set-function-button {
+    width: 200px; height: 40px;
+    margin: 0 10px; padding: 10px;
+    border: none;
+}
