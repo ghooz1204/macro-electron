@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "rebuild": "npm rebuild --runtime=electron --target=8.1.1 --disturl=https://atom.io/download/atom-shell --abi=72"
+    "rebuild": "npm rebuild --runtime=electron --target=8.1.1 --disturl=https://atom.io/download/atom-shell --abi=76"
   },
   "author": "",
   "license": "ISC",
